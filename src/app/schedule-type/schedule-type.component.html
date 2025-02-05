@@ -1,0 +1,18 @@
+<div class="schedule-type-container">
+    <form [formGroup]="scheduleTypeForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="scheduleType">Schedule Type</label>
+        <input
+          type="text"
+          id="scheduleType"
+          formControlName="scheduleType"
+          class="form-control"
+          placeholder="Enter Schedule Type"
+        />
+        <div *ngIf="scheduleTypeForm.controls['scheduleType']?.invalid && scheduleTypeForm.controls['scheduleType']?.touched" class="error">
+          Schedule Type is required.
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>

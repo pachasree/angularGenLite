@@ -1,0 +1,16 @@
+<div class="report-template-name-field">
+    <label for="reportTemplateName">Report Template Name</label>
+    <input
+      type="text"
+      id="reportTemplateName"
+      name="reportTemplateName"
+      [(ngModel)]="reportTemplateName"
+      required
+      class="form-control"
+      placeholder="Enter the name of the report template"
+    />
+    <div *ngIf="isSubmitted && !reportTemplateName" class="validation-error">
+      Report Template Name is required.
+    </div>
+  </div>
+  

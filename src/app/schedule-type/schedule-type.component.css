@@ -1,0 +1,13 @@
+.schedule-type-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}

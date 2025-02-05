@@ -1,0 +1,21 @@
+.rdl-file-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.rdl-file-container label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.rdl-file-container input[type='file'] {
+  margin-bottom: 10px;
+}
+
+.rdl-file-container button {
+  margin-right: 10px;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}

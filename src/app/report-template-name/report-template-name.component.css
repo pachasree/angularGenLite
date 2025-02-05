@@ -1,0 +1,20 @@
+.report-template-name-field {
+  margin: 10px 0;
+}
+
+.report-template-name-field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.report-template-name-field .form-control {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.validation-error {
+  color: red;
+  margin-top: 5px;
+}

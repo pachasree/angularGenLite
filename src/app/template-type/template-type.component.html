@@ -1,0 +1,12 @@
+<form [formGroup]="templateTypeForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="templateType">Template Type</label>
+      <select id="templateType" formControlName="templateType" class="form-control">
+        <option *ngFor="let type of templateTypes" [value]="type.RDLTypeCde">{{ type.RDLTypeDesc }}</option>
+      </select>
+      <div *ngIf="templateTypeForm.controls['templateType']?.invalid && templateTypeForm.controls['templateType']?.touched" class="text-danger">
+        Template Type is required
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="templateTypeForm?.['invalid']">Submit</button>
+  </form>

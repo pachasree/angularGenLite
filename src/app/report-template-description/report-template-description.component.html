@@ -1,0 +1,19 @@
+<div class="form-group">
+    <label for="reportTemplateDescription">Report Template Description</label>
+    <textarea
+      id="reportTemplateDescription"
+      class="form-control"
+      [(ngModel)]="reportTemplateDescription"
+      name="reportTemplateDescription"
+      rows="4"
+      placeholder="Enter the description of the report template"
+      required
+    ></textarea>
+    <div *ngIf="descriptionControl.invalid && (descriptionControl.dirty || descriptionControl.touched)" class="text-danger">
+      <div *ngIf="descriptionControl.errors?.['required']">
+        
+        Description is required.
+      </div>
+    </div>
+  </div>
+  

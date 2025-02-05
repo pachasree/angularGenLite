@@ -1,0 +1,11 @@
+<div class="form-group">
+    <label for="reportType">Report Type</label>
+    <select id="reportType" class="form-control" [(ngModel)]="selectedReportType" (change)="onReportTypeChange($event)">
+      <option value="">{{ defaultFieldValue }}</option>
+      <option *ngFor="let option of reportTypeOptions" [value]="option.value">{{ option.label }}</option>
+    </select>
+    <div *ngIf="validationMessage" class="validation-message">
+      {{ validationMessage }}
+    </div>
+  </div>
+  
