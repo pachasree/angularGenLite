@@ -22,7 +22,7 @@ export class TemplateTypeComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.templateTypes = [this.defaultOption,{ RDLTypeCde: 'ABC', RDLTypeDesc: 'RDL Type ABC' },{ RDLTypeCde: 'XYZ', RDLTypeDesc: 'RDL Type XYZ' }];
+    this.templateTypes = [this.defaultOption,{ RDLTypeCde: 'basic', RDLTypeDesc: 'Basic' },{ RDLTypeCde: 'dynamic', RDLTypeDesc: 'Dynamic' }];
     this.templateTypeService.getTemplateTypes().subscribe(data => {
       //this.templateTypes = [this.defaultOption, ...data];
     });
