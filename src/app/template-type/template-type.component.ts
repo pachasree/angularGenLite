@@ -12,6 +12,7 @@ export class TemplateTypeComponent implements OnInit {
   templateTypeForm: FormGroup;
   templateTypes: any[] = [];
   defaultOption = { RDLTypeCde: '', RDLTypeDesc: '-- Select --' };
+  submitDisabled=false;
 
   constructor(private fb: FormBuilder, private templateTypeService: TemplateTypeService) {
     this.templateTypeForm = this.fb.group({
@@ -25,6 +26,17 @@ export class TemplateTypeComponent implements OnInit {
     this.templateTypeService.getTemplateTypes().subscribe(data => {
       //this.templateTypes = [this.defaultOption, ...data];
     });
+
+    // Listen to dropdown changes to enable/disable the button
+this.templateTypeForm.get('templateType')?.valueChanges.subscribe((value) => {
+  console.log(value);
+  if (value) {
+    this.submitDisabled = false; // Enable submit button
+  } else {
+    this.submitDisabled = true; // Disable submit button if no value is selected
+  }
+});
+
   }
 
   onSubmit(): void {
@@ -32,4 +44,6 @@ export class TemplateTypeComponent implements OnInit {
       console.log('Form Submitted', this.templateTypeForm.value);
     }
   }
+
+  
 }
