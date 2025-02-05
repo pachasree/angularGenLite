@@ -8,6 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ScheduleTypeComponent implements OnInit {
   scheduleTypeForm: FormGroup;
+  scheduleTypes: any[] = [];
   defaultFieldValue: string = 'SystemOne Batch Dependent';
 
   constructor(private fb: FormBuilder) {
@@ -16,7 +17,14 @@ export class ScheduleTypeComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.scheduleTypes =  [
+    
+      { 'value': 'SystemOne Batch Dependent', label: 'SystemOne Batch Dependent' },
+      { 'value': 'Non-Batch - Eligible Days to Run', label: 'Non-Batch - Eligible Days to Run' }
+    ];
+
+  }
 
   onSubmit(): void {
     if (this.scheduleTypeForm.valid) {

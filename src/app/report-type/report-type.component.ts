@@ -21,7 +21,7 @@ export class ReportTypeComponent implements OnInit {
   loadReportTypeOptions(): void {
 
     this.reportTypeOptions = [
-    { 'value': '-- Select --', label: '-- Select --' },
+    
     { 'value': 'Standard Customer Report Template', label: 'Standard Customer Report Template' },
     { 'value': 'Custom Customer Report Template', label: 'Custom Customer Report Template' },
     { 'value': 'Internal Report Template', label: 'Internal Report Template' },
