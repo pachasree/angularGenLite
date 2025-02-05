@@ -28,7 +28,7 @@ import { RouterModule, RouterOutlet } from '@angular/router';
     CategoryDropdownComponent,
     ReportTemplateDescriptionComponent,
     ReportTemplateNameComponent,
-    //ReportTemplateRdlFileComponent,
+    ReportTemplateRdlFileComponent,
     ReportTypeComponent,
     ScheduleTypeComponent,
     //RouterModule.forRoot(appRoutes),
