@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class ReportTypeService {
-  private apiUrl = 'https://api.example.com/report-types'; // Replace with actual API URL
-
+  //private apiUrl = 'https://api.example.com/report-types'; // Replace with actual API URL
+private apiUrl= '../category-dropdown/categoryData.json';
   constructor(private http: HttpClient) {}
 
   getReportTypeOptions(): Observable<Array<{ value: string, label: string }>> {
