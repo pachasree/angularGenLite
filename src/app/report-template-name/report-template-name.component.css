@@ -5,7 +5,7 @@
 .report-template-name-field label {
   display: block;
   margin-bottom: 5px;
-  font-weight: bold;
+  /*font-weight: bold;*/
 }
 
 .report-template-name-field .form-control {
