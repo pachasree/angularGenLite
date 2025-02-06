@@ -1,6 +1,6 @@
-<div class="form-group">
+<div class="form-group ">
     <label for="reportType">Report Type</label>
-    <select id="reportType" class="form-control" [(ngModel)]="selectedReportType" (change)="onReportTypeChange($event)">
+    <select style="width:200px;" id="reportType" class="form-control custom-select"  [(ngModel)]="selectedReportType" (change)="onReportTypeChange($event)">
       <option value="">{{ defaultFieldValue }}</option>
       <option *ngFor="let option of reportTypeOptions" [value]="option.value">{{ option.label }}</option>
     </select>
